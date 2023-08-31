@@ -1,0 +1,35 @@
+###
+GET http://localhost:8080/eletrodomestico
+
+###
+PUT http://localhost:8080/eletrodomestico
+
+###
+POST http://localhost:8080/eletrodomestico
+
+###
+DELETE http://localhost:8080/eletrodomestico/{{id}}
+
+###
+GET http://localhost:8080/endereco
+
+###
+PUT http://localhost:8080/endereco
+
+###
+POST http://localhost:8080/endereco
+
+###
+DELETE http://localhost:8080/endereco/{{id}}
+
+###
+GET http://localhost:8080/pessoa
+
+###
+PUT http://localhost:8080/pessoa
+
+###
+POST http://localhost:8080/pessoa
+
+###
+DELETE http://localhost:8080/pessoa/{{id}}

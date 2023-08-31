@@ -1,0 +1,1 @@
+insert into pessoa (nome,nascimento,parentesco,sexo,ultimo_acesso,endereco_id,pessoa_tipo,usuario_id) values ('usurio-001','1900-11-30', null , 1 ,'2023-08-06' , null , 'usuario' ,null ), ('parente-001','1900-11-30',3,1,null,null,'parente',1);

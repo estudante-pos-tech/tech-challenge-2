@@ -1,0 +1,4 @@
+Muitas são as causas de uma mensagem não legível.
+A + comuns são haver algum erro de sintaxe JSON no texto do corpo da requisição.
+Por exemplo, esquecer alguma aspas dupla; ou esquecer os dois pontos : e etc.
+Cheque a sintaxe JSON do body da sua request e tente novamente. 

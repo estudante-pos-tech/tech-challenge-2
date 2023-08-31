@@ -1,0 +1,8 @@
+package rm349040.techchallenge2.domain.model;
+
+public enum Parentesco {
+
+    IRMAO, IRMA, PAI, MAE, FILHO , FILHA, AVO,CUNHADA, SOGRA, CUNHADO, SOGRO, AGREGADO,
+    VOVO, NAMORADA, NOMORADO, CONJUGE, TIA, TIO, AMIGO, AMIGA, NENHUM, ESPOSO, ESPOSA
+
+}

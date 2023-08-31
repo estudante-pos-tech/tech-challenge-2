@@ -1,0 +1,149 @@
+#ELETRODMÉSTICOS
+
+
+###
+
+POST http://localhost:8080/eletrodomestico
+Content-Type: application/json
+
+{
+  "nome": "eletrodomestico",
+  "modelo": "casa-casa",
+  "potencia": "0.2 KWh"
+}
+
+curl -X POST --location "http://localhost:8080/eletrodomestico" -H "Content-type:application/json" -d '{"nome":"eletrodomestico", "modelo":"casa-casa", "potencia":"0.2 KWh"}'
+SUCESSO: ao criar Eletrodomestico
+
+###
+GET http://localhost:8080/eletrodomestico
+
+curl -X GET --location "http://localhost:8080/eletrodomestico"
+[{"id":8393364629003825317,"nome":"eletrodomestico","modelo":"casa-casa","potencia":"0.2 KWh"}]
+
+
+###
+PUT http://localhost:8080/eletrodomestico
+Content-Type: application/json
+
+{
+  "id": "8393364629003825317",
+  "nome": "rural-eletro",
+  "modelo": "casa-rural",
+  "potencia": "0.1 KWh"
+}
+curl -i -X PUT --location "http://localhost:8080/eletrodomestico" -H "Content-type:application/json" -d '{"id":"8393364629003825317","nome":"rural-eletro", "modelo":"casa-rural", "potencia":"0.1 KWh"}'
+{
+  "id": "8393364629003825317",
+  "nome": "rural-eletro",
+  "modelo": "casa-rural",
+  "potencia": "0.1 KWh"
+}
+
+
+###
+DELETE http://localhost:8080/eletrodomestico/8393364629003825317
+curl -X DELETE --location "http://localhost:8080/eletrodomestico/8393364629003825317"
+SUCESSO: ao excluir Eletrodomestico 8393364629003825317
+
+#ENDEREÇOS
+
+###
+
+curl -X POST --location "http://localhost:8080/endereco" -H "Content-type:application/json" -d '{"rua":"rua bela", "numero":"234", "bairro":"bairro", "cidade":"Maya","estado":"SP"}'
+POST http://localhost:8080/endereco
+Content-Type: application/json
+
+{
+  "rua": "rua bela",
+  "numero": "234",
+  "bairro": "bairro",
+  "cidade": "Maya",
+  "estado": "SP"
+}
+SUCESSO: ao criar Endereco
+
+###
+GET http://localhost:8080/endereco
+curl -X GET --location "http://localhost:8080/endereco"
+[{"id":1275424829065256685,"rua":"rua bela","numero":"234","bairro":"bairro","cidade":"Maya","estado":"SP"}]
+
+###
+
+PUT http://localhost:8080/endereco
+Content-Type: application/json
+
+{
+  "id": "1275424829065256685",
+  "rua": "rua belissima",
+  "numero": "890234",
+  "bairro": "brejo-bairro",
+  "cidade": "Mayaporã",
+  "estado": "AM"
+}
+curl -X PUT --location "http://localhost:8080/endereco" -H "Content-type:application/json" -d '{"id":"1275424829065256685", "rua":"rua belissima",  "numero":"890234", "bairro":"brejo-bairro", "cidade":"Mayaporã","estado":"AM"}'
+{
+  "id": "1275424829065256685",
+  "rua": "rua belissima",
+  "numero": "890234",
+  "bairro": "brejo-bairro",
+  "cidade": "Mayaporã",
+  "estado": "AM"
+}
+
+###
+DELETE http://localhost:8080/endereco/1275424829065256685
+curl -X DELETE --location "http://localhost:8080/endereco/1275424829065256685"
+SUCESSO: ao excluir Endereco 1275424829065256685
+
+
+
+#PESSOAS
+###
+
+POST http://localhost:8080/pessoa
+Content-Type: application/json
+
+{
+  "nome": "ana bela",
+  "nascimento": "2020-01-01",
+  "sexo": "FEMININO",
+  "parentesco": "MAE"
+}
+cur
+l -X POST --location "http://localhost:8080/pessoa" -H "Content-type:application/json" -d '{"nome":"ana bela", "nascimento":"2020-01-01", "sexo":"FEMININO", "parentesco":"MAE"}'
+SUCESSO: ao criar Pessoa
+
+###
+
+GET http://localhost:8080/pessoa
+
+curl -X GET --location "http://localhost:8080/pessoa"
+[{"id":6196618678884909927,"nome":"ana bela","nascimento":"2020-01-01","sexo":"FEMININO","parentesco":"MAE"}]
+
+
+###
+PUT http://localhost:8080/pessoa
+Content-Type: application/json
+
+{
+  "id": "6196618678884909927",
+  "nome": "Zuleica bela",
+  "nascimento": "2010-01-01",
+  "sexo": "FEMININO",
+  "parentesco": "CONJUGE"
+}
+
+curl -X PUT --location "http://localhost:8080/pessoa" -H "Content-type:application/json" -d '{"id":"6196618678884909927", "nome":"Zuleica bela", "nascimento":"2010-01-01", "sexo":"FEMININO", "parentesco":"CONJUGE"}'
+{"id":6196618678884909927,"nome":"Zuleica bela","nascimento":"2010-01-01","sexo":"FEMININO","parentesco":"CONJUGE"}
+
+###
+
+DELETE http://localhost:8080/pessoa/1401389624475652749
+
+curl -X DELETE --location "http://localhost:8080/pessoa/6196618678884909927"
+SUCESSO: ao excluir Pessoa 6196618678884909927
+
+
+
+###

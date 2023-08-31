@@ -1,0 +1,3 @@
+Para corrigir esse erro, atente para o identificador do recurso que está sendo passado na url path. 
+Por exemplo, se um recurso endereco estiver associado ao identificador 10001 e todos demais enderecos estiverem associados aos identificadores 99999xxxx, 
+então se você fizer uma solicitacao ao recurso endereco com o identificador 20002 você receberá como resposta um erro 404 pois este recurso não existe.  
