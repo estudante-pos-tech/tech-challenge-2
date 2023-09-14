@@ -36,20 +36,20 @@ public class DadosConsumoEletrodomestico{
     	/*se quiser precisao decimal maior ou menor, basta atualizar esta variavel.*/
     	int DECIMAL_PRECISION = 10;
     	
-    	BigDecimal potenciaEmKWh = new BigDecimal(eletrodomestico.getPotencia()/1000.0).setScale(DECIMAL_PRECISION, RoundingMode.HALF_UP);
+    	BigDecimal potenciaEmKW = new BigDecimal(eletrodomestico.getPotencia()/1000.0).setScale(DECIMAL_PRECISION, RoundingMode.HALF_UP);
     	BigDecimal tempoDeUsoEmHora = new BigDecimal(tempoDeUsoEmSegundos/3600.0).setScale(DECIMAL_PRECISION, RoundingMode.HALF_UP);
 
     	this.id = eletrodomestico.getId();
     	this.nome = eletrodomestico.getNome();
 
-    	//adiciona equivalente em KWh
-    	potencia = appendPotenciaEquivalenteEmKWH(eletrodomestico, potenciaEmKWh);
+    	//adiciona equivalente em KW
+    	potencia = appendPotenciaEquivalenteEmKW(eletrodomestico, potenciaEmKW);
 
     	//adiciona equivalente em horas
     	tempoDeUso = appendTempoEquivalenteEmHoras(tempoDeUsoEmSegundos, tempoDeUsoEmHora);
 
     	BigDecimal consumoEmKWh = tempoDeUsoEmHora
-    				.multiply(potenciaEmKWh)
+    				.multiply(potenciaEmKW)
     				.setScale(DECIMAL_PRECISION, RoundingMode.HALF_UP);
 
     	consumo = String.format("%s KWh", consumoEmKWh.toString());
@@ -63,12 +63,12 @@ public class DadosConsumoEletrodomestico{
     			.append(" h )").toString();
 	}
 
-	private String appendPotenciaEquivalenteEmKWH(Eletrodomestico eletrodomestico, BigDecimal potenciaEmKWh) {
+	private String appendPotenciaEquivalenteEmKW(Eletrodomestico eletrodomestico, BigDecimal potenciaEmKW) {
 		return new StringBuilder()
     			.append(Double.toString(eletrodomestico.getPotencia()))
     			.append("W ( ")
-    			.append(potenciaEmKWh.toString())
-    			.append(" KWh )").toString();
+    			.append(potenciaEmKW.toString())
+    			.append(" KW )").toString();
 	}
 
 }
