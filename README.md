@@ -1720,7 +1720,7 @@ ___
 	{
 		    "id": 1,
 		    "nome": "FACA ELÉTRICA JIN-IS-LYN",
-		    "potencia": "1.0W ( 0.0010000000 KWh )",
+		    "potencia": "1.0W ( 0.0010000000 KW )",
 		    "tempoDeUso": "1800s ( 0.5000000000 h )",
 		    "consumo": "0.0005000000 KWh"
 	}
